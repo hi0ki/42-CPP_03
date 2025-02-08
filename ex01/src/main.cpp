@@ -3,8 +3,8 @@
 
 int main()
 {
-	ClapTrap claptrap("Claptrap");
-	ScavTrap obj("mehdi");
+	ClapTrap claptrap("class1");
+	ScavTrap obj("class2");
 
 	// claptrap = obj;
 	obj.attack("Bandit");

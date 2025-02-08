@@ -52,51 +52,49 @@ void	ClapTrap::attack(std::string const &target)
 	std::cout << GREEN << "ClapTrap " << this->name << " attacks " << target << ", causing " << this->attackDamage << " points of damage!" << RESET << std::endl;
 	this->energyPoints--;
 }
+
 void	ClapTrap::takeDamage(unsigned int amount)
 {
 	if (!this->hitPoints)
 	{
-		std::cout << RED << "ClapTrap " << this->name << " is already dead" << RESET << std::endl;
+		std::cout << RED << this->name << " is already dead" << RESET << std::endl;
 		return ;
 	}
 	else if (!amount)
 	{
-		std::cout << GREEN << "ClapTrap " << this->name << " takes no damage" << RESET << std::endl;
+		std::cout << GREEN << this->name << " takes no damage" << RESET << std::endl;
 		return ;
 	}
 	else if (this->hitPoints - amount <= 0)
 	{
-		std::cout << GREEN << "ClapTrap " << this->name << " takes " << amount << " points of damage and dies" << RESET << std::endl;
+		std::cout << GREEN << this->name << " takes " << amount << " points of damage and dies" << RESET << std::endl;
 		this->hitPoints = 0;
 		return ;
 	}
-	std::cout << GREEN << "ClapTrap " << this->name << " takes " << amount << " points of damage, and still has " << this->hitPoints - amount << " hit points!" << RESET << RED << std::endl;
+	std::cout << GREEN << this->name << " takes " << amount << " points of damage, and still has " << this->hitPoints - amount << " hit points!" << RESET << RED << std::endl;
 	this->hitPoints -= amount;
 }
 void	ClapTrap::beRepaired(unsigned int amount)
 {
 	if (!this->hitPoints)
 	{
-		std::cout << RED << "ClapTrap " << this->name << " is dead and cannot be repaired" << std::endl;
+		std::cout << RED << this->name << " is dead and cannot be repaired" << std::endl;
 		return ;
 	}
 	else if (!this->energyPoints)
 	{
-		std::cout << RED << "ClapTrap " << this->name << " has no energy points and cannot be repaired" << std::endl;
+		std::cout << RED << this->name << " has no energy points and cannot be repaired" << std::endl;
 		return ;
 	}
 	else if (!amount)
 	{
-		std::cout << RED << "ClapTrap " << this->name << " is not repaired" << RESET << std::endl;
+		std::cout << RED << this->name << " is not repaired" << RESET << std::endl;
 		return ;
 	}
-	else if (this->hitPoints + amount >= 10)
-	{
-		std::cout << GREEN << "ClapTrap " << this->name << " is fully repaired!" << RESET << std::endl;
+	if (this->hitPoints + amount >= 10)
 		this->hitPoints = 10;
-		return ;
-	}
-	std::cout << GREEN << "ClapTrap " << this->name << " is repaired for " << amount + this->hitPoints << " points!" << RESET << std::endl;
-	this->hitPoints += amount;
+	else 
+		this->hitPoints += amount;
+	std::cout << GREEN << this->name << " is repaired!" << RESET << std::endl;
 	this->energyPoints--;
 }
