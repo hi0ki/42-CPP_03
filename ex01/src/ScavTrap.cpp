@@ -33,4 +33,29 @@ ScavTrap::~ScavTrap()
 {
 	std::cout << GREY << "ScavTrap destructor" << RESET << std::endl;
 }
-// ScavTrapvoid guardGate();
+
+void	ScavTrap::attack(std::string const &target)
+{
+	if (!this->hitPoints)
+	{
+		std::cout << RED << "ScavTrap " << this->name << " is dead and cannot attack" << RESET << std::endl;
+		return ;
+	}
+	else if (!this->energyPoints)
+	{
+		std::cout << RED << "ScavTrap " << this->name << " has no energy points and cannot attack" << RESET << std::endl;
+		return ;
+	}
+	else if (!this->attackDamage)
+	{
+		std::cout << RED << "ScavTrap " << this->name << " has no attack damage and cannot attack" << RESET << std::endl;
+		return ;
+	}
+	std::cout << GREEN << "ScavTrap " << this->name << " attacks " << target << ", causing " << this->attackDamage << " points of damage!" << RESET << std::endl;
+	this->energyPoints--;
+}
+
+void ScavTrap::guardGate()
+{
+	std::cout << GREEN << "ScavTrap " << this->name << " is now in Gate keeper mode." << RESET << std::endl;
+}

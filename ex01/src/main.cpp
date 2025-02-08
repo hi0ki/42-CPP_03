@@ -8,6 +8,8 @@ int main()
 
 	// claptrap = obj;
 	obj.attack("Bandit");
+	obj.guardGate();
+	claptrap.attack("Bandit");
 	obj.takeDamage(9);
 	obj.beRepaired(5);
 	obj.beRepaired(3);
