@@ -1,4 +1,4 @@
-#include "ClapTrap.hpp"
+#include "../include/ClapTrap.hpp"
 
 ClapTrap::ClapTrap() : name("Unnamed"), hitPoints(10), energyPoints(10), attackDamage(0)
 {
@@ -6,7 +6,7 @@ ClapTrap::ClapTrap() : name("Unnamed"), hitPoints(10), energyPoints(10), attackD
 }
 ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0)
 {
-	std::cout << GREY << "ClapTrap " << this->name << " constructor called" << RESET << std::endl;
+	std::cout << GREY << "ClapTrap name constructor called" << RESET << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &obj)

@@ -1,6 +1,6 @@
 C++ = c++ -Wall -Wextra -Werror
 
-SRC = main.cpp  ClapTrap.cpp
+SRC = src/main.cpp  src/ClapTrap.cpp
 
 NAME = program
 
@@ -8,10 +8,10 @@ OBJ = $(SRC:.cpp=.o)
 
 ALL: $(NAME)
 
-$(NAME): $(OBJ) ClapTrap.hpp
+$(NAME): $(OBJ) include/ClapTrap.hpp
 	$(C++) $(OBJ) -o $(NAME)
 
-%.o:%.cpp ClapTrap.hpp
+%.o:%.cpp include/ClapTrap.hpp
 	$(C++) -c $< -o $@
 
 clean:
