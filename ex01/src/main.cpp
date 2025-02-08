@@ -4,13 +4,13 @@
 int main()
 {
 	ClapTrap claptrap("Claptrap");
-	ScavTrap obj;
+	ScavTrap obj("mehdi");
 
-	claptrap = obj;
-	claptrap.attack("Bandit");
-	claptrap.takeDamage(9);
-	claptrap.beRepaired(10);
-	claptrap.beRepaired(3);
+	// claptrap = obj;
+	obj.attack("Bandit");
+	obj.takeDamage(9);
+	obj.beRepaired(5);
+	obj.beRepaired(3);
 
 	return (0);
 } 

@@ -10,6 +10,8 @@
 			ScavTrap(std::string name);
 			ScavTrap(const ScavTrap &obj);
 			~ScavTrap();
+			// err on linux on copy constructor test it on mac
+			ScavTrap& operator=(const ScavTrap &obj);
 			void guardGate();
 	};
 #endif
