@@ -29,12 +29,12 @@ ScavTrap	&ScavTrap::operator=(const ScavTrap &obj)
 {
 	std::cout << GREY << "ScavTrap assignation operator" << RESET << std::endl;
 	if (this != &obj)
-	(
-		this->name = obj.name;
-		this->hitPoints = obj.hitPoints;
-		this->energyPoints = obj.energyPoints;
-		this->attackDamage = obj.attackDamage;
-	)
+	{
+        this->name = obj.name;
+        this->hitPoints = obj.hitPoints;
+        this->energyPoints = obj.energyPoints;
+        this->attackDamage = obj.attackDamage;
+	}
 	return (*this);
 }
 
