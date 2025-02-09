@@ -10,7 +10,9 @@
 			ScavTrap(std::string name);
 			ScavTrap(const ScavTrap &obj);
 			~ScavTrap();
+
 			ScavTrap	&operator=(const ScavTrap &obj);
+
 			void	attack(std::string const &target);
 			void guardGate();
 	};

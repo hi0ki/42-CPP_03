@@ -3,15 +3,18 @@
 
 int main()
 {
-	ClapTrap claptrap("class1");
-	ScavTrap obj("class2");
+    ClapTrap claptrap("ClapTrap");
+    ScavTrap scavtrap("ScavTrap");
 
-	obj.guardGate();
-	obj.attack("Bandit");
-	obj.takeDamage(10);
-	claptrap.attack("Bandit");
-	claptrap.takeDamage(10);
-	claptrap.beRepaired(10);
+    claptrap.attack("target1");
+    claptrap.takeDamage(5);
+    claptrap.beRepaired(3);
 
-	return (0);
-} 
+	std::cout << "---------------------------------" << std::endl;
+    scavtrap.attack("target2");
+    scavtrap.takeDamage(10);
+    scavtrap.beRepaired(5);
+    scavtrap.guardGate();
+
+    return 0;
+}
