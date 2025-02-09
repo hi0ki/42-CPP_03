@@ -6,13 +6,12 @@ int main()
 	ClapTrap claptrap("class1");
 	ScavTrap obj("class2");
 
-	// claptrap = obj;
-	obj.attack("Bandit");
 	obj.guardGate();
+	obj.attack("Bandit");
+	obj.takeDamage(10);
 	claptrap.attack("Bandit");
-	obj.takeDamage(9);
-	obj.beRepaired(5);
-	obj.beRepaired(3);
+	claptrap.takeDamage(10);
+	claptrap.beRepaired(10);
 
 	return (0);
 } 

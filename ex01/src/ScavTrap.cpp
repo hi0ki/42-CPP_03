@@ -20,15 +20,6 @@ ScavTrap::ScavTrap(const ScavTrap &obj) : ClapTrap(obj)
 	*this = obj;
 }
 
-ScavTrap& ScavTrap::operator=(const ScavTrap &obj)
-{
-    if (this != &obj)
-    {
-        ClapTrap::operator=(obj);
-    }
-    return *this;
-}
-
 ScavTrap::~ScavTrap()
 {
 	std::cout << GREY << "ScavTrap destructor" << RESET << std::endl;

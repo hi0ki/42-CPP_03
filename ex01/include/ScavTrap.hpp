@@ -11,8 +11,6 @@
 			ScavTrap(const ScavTrap &obj);
 			~ScavTrap();
 			void	attack(std::string const &target);
-			// err on linux on copy constructor test it on mac
-			ScavTrap& operator=(const ScavTrap &obj);
 			void guardGate();
 	};
 #endif
