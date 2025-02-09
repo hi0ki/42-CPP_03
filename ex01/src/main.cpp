@@ -12,7 +12,7 @@ int main()
 
 	std::cout << "---------------------------------" << std::endl;
     scavtrap.attack("target2");
-    scavtrap.takeDamage(10);
+    scavtrap.takeDamage(199);
     scavtrap.beRepaired(5);
     scavtrap.guardGate();
 
