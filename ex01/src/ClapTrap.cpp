@@ -1,10 +1,10 @@
 #include "../include/ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : name("Unnamed"), hitPoints(100), energyPoints(50), attackDamage(20)
+ClapTrap::ClapTrap() : name("Unnamed"), hitPoints(10), energyPoints(10), attackDamage(0)
 {
 	std::cout << GREY << "ClapTrap default constructor called" << RESET << std::endl;
 }
-ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(100), energyPoints(50), attackDamage(20)
+ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0)
 {
 	std::cout << GREY << "ClapTrap name constructor called" << RESET << std::endl;
 }
@@ -71,19 +71,19 @@ void	ClapTrap::takeDamage(unsigned int amount)
 		this->hitPoints = 0;
 		return ;
 	}
-	std::cout << GREEN << this->name << " takes " << amount << " points of damage, and still has " << this->hitPoints - amount << " hit points!" << RESET << RED << std::endl;
+	std::cout << GREEN << this->name << " takes " << amount << " points of damage, and still has " << this->hitPoints - amount << " hit points!" << RESET << std::endl;
 	this->hitPoints -= amount;
 }
 void	ClapTrap::beRepaired(unsigned int amount)
 {
 	if (!this->hitPoints)
 	{
-		std::cout << RED << this->name << " is dead and cannot be repaired" << std::endl;
+		std::cout << RED << this->name << " is dead and cannot be repaired" << RESET << std::endl;
 		return ;
 	}
 	else if (!this->energyPoints)
 	{
-		std::cout << RED << this->name << " has no energy points and cannot be repaired" << std::endl;
+		std::cout << RED << this->name << " has no energy points and cannot be repaired" <<  RESET << std::endl;
 		return ;
 	}
 	else if (!amount)

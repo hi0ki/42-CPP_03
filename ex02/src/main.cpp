@@ -1,17 +1,32 @@
 #include "../include/ClapTrap.hpp"
 #include "../include/ScavTrap.hpp"
+#include "../include/FragTrap.hpp"
 
 int main()
 {
-	ClapTrap claptrap("class1");
-	ScavTrap obj("class2");
+    // Create instances of each class
+    ClapTrap claptrap("ClapTrap");
+    ScavTrap scavtrap("ScavTrap");
+    FragTrap fragtrap("FragTrap");
 
-	obj.guardGate();
-	obj.attack("Bandit");
-	obj.takeDamage(10);
-	claptrap.attack("Bandit");
-	claptrap.takeDamage(10);
-	claptrap.beRepaired(10);
+    // Test ClapTrap functionalities
+    claptrap.attack("target1");
+    claptrap.takeDamage(10);
+    claptrap.beRepaired(3);
 
-	return (0);
-} 
+    std::cout << "----------------------------------------------------" << std::endl;
+    // Test ScavTrap functionalities
+    scavtrap.attack("target2");
+    scavtrap.takeDamage(10);
+    scavtrap.beRepaired(5);
+    scavtrap.guardGate();
+
+    std::cout << "----------------------------------------------------" << std::endl;
+    // Test FragTrap functionalities
+    fragtrap.takeDamage(15);
+    fragtrap.beRepaired(10);
+    fragtrap.attack("target3");
+    fragtrap.highFivesGuys();
+
+    return 0;
+}
