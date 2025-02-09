@@ -25,6 +25,16 @@ ScavTrap::~ScavTrap()
 	std::cout << GREY << "ScavTrap destructor" << RESET << std::endl;
 }
 
+ScavTrap	&ScavTrap::operator=(const ScavTrap &obj)
+{
+	std::cout << GREY << "ScavTrap assignation operator" << RESET << std::endl;
+	this->name = obj.name;
+	this->hitPoints = obj.hitPoints;
+	this->energyPoints = obj.energyPoints;
+	this->attackDamage = obj.attackDamage;
+	return (*this);
+}
+
 void	ScavTrap::attack(std::string const &target)
 {
 	if (!this->hitPoints)
