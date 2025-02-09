@@ -6,10 +6,10 @@ FragTrap::FragTrap()
 }
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
-	std::cout << GREY << "FragTrap name constructor called" << RESET << std::endl;
 	this->hitPoints = 100;
 	this->energyPoints = 100;
 	this->attackDamage = 30;
+	std::cout << GREY << "FragTrap name constructor called" << RESET << std::endl;
 }
 FragTrap::FragTrap(const FragTrap &obj) : ClapTrap(obj)
 {

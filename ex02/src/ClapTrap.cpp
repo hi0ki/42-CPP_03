@@ -65,7 +65,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 		std::cout << GREEN << this->name << " takes no damage" << RESET << std::endl;
 		return ;
 	}
-	else if (this->hitPoints - amount <= 0)
+	else if (this->hitPoints <= amount)
 	{
 		std::cout << GREEN << this->name << " takes " << amount << " points of damage and dies" << RESET << std::endl;
 		this->hitPoints = 0;

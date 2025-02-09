@@ -17,15 +17,15 @@ int main()
     std::cout << "----------------------------------------------------" << std::endl;
     // Test ScavTrap functionalities
     scavtrap.attack("target2");
-    scavtrap.takeDamage(10);
+    scavtrap.takeDamage(99);
     scavtrap.beRepaired(5);
     scavtrap.guardGate();
 
     std::cout << "----------------------------------------------------" << std::endl;
     // Test FragTrap functionalities
+    fragtrap.attack("target3");
     fragtrap.takeDamage(15);
     fragtrap.beRepaired(10);
-    fragtrap.attack("target3");
     fragtrap.highFivesGuys();
 
     return 0;
