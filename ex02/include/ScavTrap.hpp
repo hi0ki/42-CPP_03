@@ -12,6 +12,6 @@
 			~ScavTrap();
 			ScavTrap	&operator=(const ScavTrap &obj);
 			void	attack(std::string const &target);
-			void guardGate();
+			void	guardGate();
 	};
-#endif
+#endif 
