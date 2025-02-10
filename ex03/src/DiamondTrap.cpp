@@ -1,14 +1,18 @@
-#include "../includes/DiamondTrap.hpp"
+#include "../include/DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap()
+DiamondTrap::DiamondTrap() : ClapTrap("DiamondTrap_clap_name") 
 {
-	std::cout << "DiamondTrap default constructor called" << std::endl;
+	std::cout << GREY << "DiamondTrap default constructor called" << RESET << std::endl;
 }
-DiamondTrap(std::string name)
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap("DiamondTrap_clap_name")
 {
-	std::cout << "DiamondTrap name constructor called" << std::endl;
+	this->name = name;
+	std::cout << GREY << "DiamondTrap name constructor called" << RESET <<std::endl;
 }
 
 // DiamondTrap(const DiamondTrap &obj);
-// ~DiamondTrap();
+DiamondTrap::~DiamondTrap()
+{
+	std::cout << GREY << "DiamondTrap " << this->name << " destructor called" << RESET << std::endl;
+}
 // DiamondTrap	&operator=(const DiamondTrap &obj);

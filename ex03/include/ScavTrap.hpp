@@ -3,7 +3,7 @@
 
 	#include "ClapTrap.hpp"
 
-	class ScavTrap : public ClapTrap
+	class ScavTrap : virtualpublic ClapTrap
 	{
 		public:
 			ScavTrap();

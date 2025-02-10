@@ -1,12 +1,12 @@
 C++ = c++ -Wall -Wextra -Werror
 
-SRC = src/main.cpp  src/ClapTrap.cpp src/ScavTrap.cpp src/FragTrap.cpp
+SRC = src/main.cpp  src/ClapTrap.cpp src/ScavTrap.cpp src/FragTrap.cpp src/DiamondTrap.cpp
 
 NAME = program
 
 OBJ = $(SRC:.cpp=.o)
 
-HEADERS = include/ClapTrap.hpp include/ScavTrap.hpp include/FragTrap.hpp
+HEADERS = include/ClapTrap.hpp include/ScavTrap.hpp include/FragTrap.hpp include/DiamondTrap.hpp
 
 ALL: $(NAME)
 
